@@ -72,26 +72,30 @@ e.	Trigger (Gatilho)
 ![Imagem fornecida no teste](https://raw.githubusercontent.com/liraRaphael/alpha7-teste/main/bd.jpg)
 
 a.	Todos os itens vendidos no mês de Janeiro de 2012.
-  
+
+```
   SELECT 
     DISTINCT(NomeProduto)
   FROM 
     ItemVenda iv
   WHERE
     IDVenda IN (SELECT v.IDVenda FROM Venda v WHERE v.DataVenda BETWEEN '2012-01-01' AND '2012-01-31')
-
+```
 
 b.	A soma do Valor do Item multiplicado pela quantidade dos itens vendidos para o cliente ‘José’.
 
+```
   SELECT 
     sum(Quantidade * ValorItem)
   FROM 
     ItemVenda iv
   WHERE
     IDVenda IN (SELECT v.IDVenda FROM Venda v WHERE v.NomeCliente = "José")
+```
 
 c.	A contagem de todos os itens vendidos por cliente.
 
+```
   SELECT 
     NomeCliente,
     sum(Quantidade) as QtdTotal
@@ -100,9 +104,11 @@ c.	A contagem de todos os itens vendidos por cliente.
       ON v.IDVenda = ivf.IDVenda
   GROUP BY
     v.NomeCliente
+```
 
 d.	Soma das quantidades vendidas por produto, onde essa soma seja maior que 10.
 
+```
   SELECT 
     ivf.NomeProduto,    
     ivf.QtdTotal
@@ -110,6 +116,7 @@ d.	Soma das quantidades vendidas por produto, onde essa soma seja maior que 10.
     (SELECT NomeProduto,sum(Quantidade) QtdTotal FROM ItemVenda iv GROUP BY NomeProduto) ivf
   WHERE
     ivf.QtdTotal > 10
+```
 
 
 
