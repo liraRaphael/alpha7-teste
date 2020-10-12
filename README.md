@@ -19,14 +19,21 @@ c.	Árvores
 
 2. O que são WebServices e por que podem ser utilizados como um bom método de Integração entre sistemas (EDI - Eletronic Data Interchange)?
   > O WebService é um programa que tem como objetivo a comunicação entre duas aplicações por meio de um protocolo de rede(como HTTP/HTTPS), onde se processam dados(implementam as regras de negócios), lendo, criado, atualizado e excluído informações. Geralmente, a comunicação é feita por linguagem de marcação, e mais popularmente por XML e JSON.
+  >
   > Sua vantagem está em evitar ter que escrever códigos para aplicação cliente que já forem feitos, poupar em manutenção(já que será uma única aplicação para o processamento) e mantendo a segurança dó código do WebService, enquanto para o EDIs, só necessário fazer a integração de comunicação, ou seja, menos código a ser escrito.
+  >
 
 3. O que são Design Patterns?  Cite exemplos de alguns Design Patterns conhecidos.
   > Design Patterns são metodologia para padrões de projetos, que tem como objetivo a solução de problemas recorrente.
+  >
   > Alguns dos mais conhecidos(e que já tive a oportunidade de usar) são: 
+  >
   > Refatoração de código: É reescrever o código já existe, melhorando sua estrutura e deixando mais legível.
+  >
   > Arquitetura de Projeto MVC: Esta metodologia serve para separar o que é *Model*(tudo pertencente ao banco de dados), *View*(tudo que for UI), *Controller*(responsável por controlar e usar os *Models* e *Views*).
+  >
   > Abstracty Factory: Serve para padronizar objetos semelhantes ou relacionados.
+  >
   > DAO: Responsável pela comunicação com o Banco de Dados.
 
 4. Discorra sobre os seguintes conceitos relacionados à Orientação a Objetos:
@@ -42,6 +49,7 @@ c.	Acoplamento
 
 d.	Coesão
   > Coesão diz respeita a quantidade de responsabilidade que essa classe tem, dizemos que é *Alta Coesão*, quando tem apenas uma responsabilidade, e *Baixa Coesão* quando tem diversar. Sempre devemos manter uma *Alta coesão*, pois, ajuda na manutenção e na reutilização do código.
+  >
   > Ex: Uma classe *Pneu* não deve ter Componentes de *Porta*
 
 e.	Classe Abstrata
